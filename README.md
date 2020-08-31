@@ -1,4 +1,4 @@
-# TouhouMonitor
+# TouhouMonitor (WIP)
 
 Monitor events in Touhou games.
 
