@@ -1,5 +1,4 @@
 ﻿using Prism.Ioc;
-using TouhouMonitor.Views;
 using System.Windows;
 
 namespace TouhouMonitor
@@ -11,12 +10,12 @@ namespace TouhouMonitor
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainWindow>();
+            return Container.Resolve<Views.MainWindow>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.Register<Services.ICustomerStore, Services.DbCustomerStore>();
         }
     }
 }
