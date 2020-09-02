@@ -8,6 +8,12 @@ namespace TouhouMonitor.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
+        private string _title = "TouhouMonitor v0.0.1";
+        public string Title
+        {
+            get => _title;
+        }
+
         private Services.ICustomerStore _customerStore = null;
 
         public MainWindowViewModel(Services.ICustomerStore customerStore)
